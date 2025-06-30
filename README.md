@@ -1,5 +1,5 @@
 # CubeFlow 🧊
-##Rubik's Cube Solver with History & Save Features 🚀
+## Rubik's Cube Solver with History & Save Features 🚀
 
 Welcome to my Rubik's Cube Solver web app!  
 This is an interactive project where you can solve a 3x3 Rubik’s Cube either manually or using a camera input (coming soon 📷), and now — you’ll be able to **save your cube states and revisit them later using Firestore!**
