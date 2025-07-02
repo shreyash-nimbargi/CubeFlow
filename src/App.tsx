@@ -11,7 +11,7 @@ function App() {
   const [solution, setSolution] = useState<SolutionStep[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleCubeStateChange = (newState: CubeState) => {
+  const handleCubeStateChange = (newState: CubeState | null) => {
     setCubeState(newState);
   };
 
@@ -50,7 +50,7 @@ function App() {
               <div className="w-10 h-10 bg-gradient-to-br from-red-400 to-orange-500 rounded-lg flex items-center justify-center">
                 <Square className="w-6 h-6 text-white" />
               </div>
-              <h1 className="text-xl font-bold text-white">CubeSolver Pro</h1>
+              <h1 className="text-xl font-bold text-white">CubeFlow</h1>
             </div>
             
             <div className="flex items-center space-x-4">
