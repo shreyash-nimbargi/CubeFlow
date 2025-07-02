@@ -182,7 +182,7 @@ const CameraCaptureMode: React.FC<CameraCaptureModeProps> = ({ onCubeStateChange
   }
 
   return (
-    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-white">Camera Analysis</h2>
         <button
@@ -273,3 +273,5 @@ const CameraCaptureMode: React.FC<CameraCaptureModeProps> = ({ onCubeStateChange
 };
 
 export default CameraCaptureMode;
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
