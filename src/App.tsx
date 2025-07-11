@@ -17,20 +17,20 @@ function App() {
 
   const handleSolve = async () => {
     if (!cubeState) return;
-    
+
     setIsLoading(true);
     // Simulate solving process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     // Mock solution steps
     const mockSolution: SolutionStep[] = [
       { move: "R U R' U'", description: "Right hand trigger" },
       { move: "F R U' R' F'", description: "Front right insert" },
       { move: "R U2 R' U2", description: "Right double turn" },
       { move: "R U R' F R F'", description: "Corner orientation" },
-      { move: "U R U' R'", description: "Final adjustment" }
+      { move: "U R U' R'", description: "Final adjustment" },
     ];
-    
+
     setSolution(mockSolution);
     setIsLoading(false);
   };
@@ -52,7 +52,7 @@ function App() {
               </div>
               <h1 className="text-xl font-bold text-white">CubeFlow</h1>
             </div>
-            
+
             <div className="flex items-center space-x-4">
               <button
                 onClick={resetSolver}
@@ -61,12 +61,12 @@ function App() {
                 <RotateCcw className="w-4 h-4" />
                 <span>Reset</span>
               </button>
-              
+
               <button className="flex items-center space-x-2 px-4 py-2 text-white/80 hover:text-white transition-colors">
                 <History className="w-4 h-4" />
                 <span>History</span>
               </button>
-              
+
               <button className="flex items-center space-x-2 px-4 py-2 text-white/80 hover:text-white transition-colors">
                 <Save className="w-4 h-4" />
                 <span>Save</span>
@@ -92,7 +92,7 @@ function App() {
                 <Camera className="w-5 h-5" />
                 <span className="font-medium">Camera Analysis</span>
               </button>
-              
+
               <button
                 onClick={() => setActiveMode('manual')}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-full transition-all duration-200 ${
@@ -116,7 +116,7 @@ function App() {
             ) : (
               <ManualInputMode onCubeStateChange={handleCubeStateChange} />
             )}
-            
+
             {/* Solve Button */}
             {cubeState && (
               <div className="flex justify-center">
